@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Build</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Simple Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"], .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h2>Login Page</h2><br>
-    <div class="login">
-    <form id="login" method="get" action="login.php">
-        <label><b>User Name
-        </b>
-        </label>
-        <input type="text" name="Uname" id="Uname" placeholder="Username">
-        <br><br>
-        <label><b>Password
-        </b>
-        </label>
-        <input type="Password" name="Pass" id="Pass" placeholder="Password">
-        <br><br>
-        <input type="button" name="log" id="log" value="Log In Here">
-        <br><br>
-        <input type="checkbox" id="check">
-        <span>Remember me</span>
-        <br><br>
-        Forgot <a href="#">Password</a>
-    </form>
-</div>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="login_action.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </body>
 </html>
+
